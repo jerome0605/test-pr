@@ -1,7 +1,7 @@
 # ui.py
 
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout, QLineEdit, QComboBox, QLabel) # type: ignore
-from PyQt5.QtGui import QIcon # type: ignore
+from PyQt5.QtGui import QIcon, QFont # type: ignore
 from PyQt5 import QtCore # type: ignore
 
 class View(QWidget):
@@ -31,6 +31,7 @@ class View(QWidget):
         self.formular.addWidget(self.le2)
         
         self.lbl1 = QLabel('v2.3.0', self)  # Version label
+        self.lbl1.setFont(QFont('Consolas', 10))    # Set font for the version label  
         
         self.btn1 = QPushButton('Calc', self)
         #self.btn1.clicked.connect(self.setDisplay)
